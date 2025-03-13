@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+             'ink': ['Inter', 'sans-serif'],
+            },
+            colors: {
+              brand: '#4CAF4F',
+              brand2: '#263238',
+              Hero: '#F5F7FA',
+              navs: '#18191F',
+              grey1: '#717171',
+              grey2: '#4D4D4D',
+              timsmith: '#89939E',
+              footer: '#F5F7FA',
+              footer2: '#D9DBE1',
+              herop: '#000000',
+              blog: '#F5F7FA',
+              socialsbg: '#3c464c',
+              footerfield: '#515b60',
+
+            }
+            }
+          }
+        }
+      
+    </script>
+</head>
+<body>
+
+    <header class="bg-Hero">
+
+        <!-- navigation Bar -->
+
+        <div class="flex flex-col md:flex-row p-4 justify-around pt-10">
+            <img src="./illustrations & Icons/Logo@2x.svg" alt="" class="w-40 md:w-80 lg:full"> 
+
+            <nav>
+                <ul class="flex items-center space-x-6">
+                    <li><a href="" class="text-nav font-normal text-md">Home</a></li>
+                    <li><a href="" class="text-nav font-normal text-md">Servive</a></li>
+                    <li><a href="" class="text-nav font-normal text-md">Feature</a></li>
+                    <li><a href="" class="text-nav font-normal text-md">Product</a></li>
+                    <li><a href="" class="text-nav font-normal text-md">Testimonial</a></li>
+                    <li><a href="" class="text-nav font-normal text-md">FAQ</a></li>
+                </ul>
+            </nav>
+
+            <div class="space-x-4">
+                <button class="text-brand text-xs font-semibold">Login</button>
+                <button class="rounded-sm text-white bg-brand px-5 py-2 text-xs hover:bg-herop font-semibold">Signup</button>
+            </div>
+            
+        </div>
+
+        <!-- Herosection-------- -->
+
+
+        <div class="flex items-center justify-around p-10 space-x-8">
+            <div class="pl-20 w-2/4">
+
+                <h1 class="-10 text-5xl font-bold text-left text-grey2">Lessons and insights <br> <span class="text-5xl font-bold text-left text-brand pt-2">from 8 years</span></h1> 
+                <p class="text-sm py-5 font-normal text-herop">Where to grow your business as a photographer: site or social media?</p>
+    
+    
+                <button class="rounded-sm bg-brand text-white text-xs py-2 px-6 hover:bg-herop">Register</button></div>
+
+
+            <div class="pl-40 pr-20 w-2/4"> <img src="./illustrations & Icons/Illustration-hero.svg" alt="" class="w-200"></div>
+            
+        </div>
+
+
+    </header>
+
+    <!-- main -->
+
+    <main>
+
+        <section class="bg-white px-10 mb-20">
+
+            <h1 class="text-grey2 text-center text-2xl font-semibold leading-6 pt-10 pb-3">Manage your entire community <br> in a single system</h1>
+            <p class="text-grey1 text-center text-xs leading-tight text-normal ">Who is Nextcent suitable for?
+            </p>
+
+            <div class="grid grid-cols-3 gap-4 justify-around p-10">
+
+                <div class="flex flex-col items-center">
+                    <img src="./illustrations & Icons/Icon2.svg" alt="" class="pb-3">
+                    <h2 class="text-grey2 text-center font-bold leading-4 pb-2">Membership <br> Organisations</h2>
+                    <p class="text-grey1 text-xs text-center font-light">Our membership management <br> software provides full automation of <br> membership renewals and payments</p>
+                </div>
+
+                <div class="flex flex-col items-center">
+                    <img src="./illustrations & Icons/Icon3.svg" alt="" class="pb-3">
+                    <h2 class="text-grey2 text-center font-bold leading-4 pb-2">National <br> Associations</h2>
+                    <p class="text-grey1 text-xs text-center font-light">Our membership management <br> software provides full automation of <br> membership renewals and payments</p>
+                </div>
+
+                <div class="flex flex-col items-center">
+                    <img src="./illustrations & Icons/Icon4.svg" alt="" class="pb-3">
+                    <h2 class="text-grey2 text-center font-bold leading-4 pb-2">Clubs And <br> Groups</h2>
+                    <p class="text-grey1 text-xs text-center font-light">Our membership management <br> software provides full automation of <br> membership renewals and payments</p>
+                </div>
+
+
+            </div>
+            
+        </section>
+
+
+        <section class="mb-10">
+
+            <div class="flex items-center justify-around p-10 ">
+
+                <div>
+                    <img src="./illustrations & Icons/illustration2.svg" alt="" class="w-full pl-20">
+                </div>
+
+
+                <div class="w-2/4 pl-20 ">
+                    <h2 class="text-grey2 text-left font-semibold text-3xl leading-8 pb-5">The unseen of spending three <br> years at Pixelgrade</h2>
+
+                    <p class="text-grey1 text-xs text-left font-normal pb-7">When joining the JustGo Community, your success becomes <br> our success. In other words, our Customer Success team will <br> be on hand from day one to ensure we understand your requirements, <br> share your goals and work with you for a smooth adoption of our software.</p>
+
+                    <button class="rounded-sm bg-brand text-white text-xs py-2 px-6 hover:bg-herop">Learn More</button>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <section class="bg-Hero py-20 px-10 my-10">
+            <div class="flex justify-around">
+
+                <div class="pl-40 w-2/4 pt-5">
+                    <h2 class="text-grey2 text-3xl font-semibold leading-7 pb-2">Helping a local <br> <span class="text-brand text-3xl font-semibold">business reinvent itself</span></h2>
+                    <p class="text-xs text-grey1 font-medium">We reached here with our hard work and dedication</p>
+                </div>
+
+
+                <div class="grid grid-flow-row-dense grid-cols-2 grid-rows-2 gap-y-4 w-2/4 pl-10 ">
+
+                    <div class="flex space-x-3">
+                        <img src="./illustrations & Icons/icon5.svg" alt="">
+                       
+                        <div> <h2 class="text-lg text-grey2 font-semibold">2,245,341</h2> 
+                            <p class="text-xs font-normal text-grey1">Members</p></div>
+                    </div>
+
+                    <div class="flex space-x-3">
+                        <img src="./illustrations & Icons/Icon6.svg" alt="">
+                        
+                        <div><h2 class="text-lg text-grey2 font-semibold">46,328</h2>
+                            <p class="text-xs font-normal text-grey1">Clubs</p></div>
+                    </div>
+
+                    <div class="flex space-x-3">
+                        <img src="./illustrations & Icons/Icon7.svg" alt="">
+                        
+                        <div><h2 class="text-lg text-grey2 font-semibold">828,867</h2>
+                            <p class="text-xs font-normal text-grey1">Event Bookings</p></div>
+                    </div>
+
+                    <div class="flex space-x-3">
+                        <img src="./illustrations & Icons/Icon8.svg" alt="">
+
+                        <div> <h2 class="text-lg text-grey2 font-semibold">1,926,436</h2>
+                            <p class="text-xs font-normal text-grey1">Payments</p></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <section>
+
+            <div class="flex items-center justify-around p-10">
+
+                <div class="w-2/4 pl-40 ">
+                    <img src="./illustrations & Icons/illustration3.svg" alt="" class="w-3/4">
+                </div>
+
+
+                <div class="w-2/4 pl-10 ">
+
+                    <h2 class="text-grey2 text-2xl font-semibold pb-2">How to design your site footer <br> like we did</h2>
+
+                    <p class="text-xs text-grey1 font-normal pb-4 ">Donec a eros justo. Fusce egestas tristique ultrices. Nam tempor, augue nec tincidunt <br> molestie, massa nunc varius arcu, at scelerisque elit erat a magna. Donec quis erat at <br> libero ultrices mollis. In hac habitasse platea dictumst. Vivamus vehicula leo dui, at <br> porta nisi facilisis finibus. In euismod augue vitae nisi ultricies, non aliquet urna <br>tincidunt. Integer in nisi eget nulla commodo faucibus efficitur quis massa. Praesent <br> felis est, finibus et nisi ac, hendrerit venenatis libero. Donec consectetur <br> faucibus ipsum id gravida.</p>
+
+                    <button class="rounded-sm bg-brand text-white text-xs py-2 px-6 hover:bg-herop">Learn More</button>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section class="bg-Hero py-20 px-10 my-10">
+
+            <div class="flex justify-center ">
+
+                <div class="w-1/2 pl-40">
+                    <img src="./illustrations & Icons/image1.svg" alt="" class="w-3/4 h-80">
+                </div>
+
+
+                <div class="w-3/4 pr-20">
+                    <p class="text-herop text-xs font-normal pb-2 pt-8">“We have enjoyed working with the JustGo system to setup and go live with our new membership platform. The initial effort to organise it along the lines of how our sport currently works  was quick and relatively easy. The new system has already massively improved the time and effort it takes to setup and process member and club applications.It will help us to communicate with people in our sport in a much more effective way, and collect  data to help us improve how our sport is governed.”</p>
+
+                    <h2 class="text-brand text-xl font-semibold pb-2">Tim Smith</h2>
+
+                    <h4 class="pb-2 text-timsmith text-sm pb-2">British Dragon Boat Racing Association</h4>
+
+
+                    <div class="flex items-center space-x-6 pt-4">
+                        <img src="./illustrations & Icons/Logo1.svg" alt="">
+                        <img src="./illustrations & Icons/Logo2.svg" alt="">
+                        <img src="./illustrations & Icons/Logo3.svg" alt="">
+                        <img src="./illustrations & Icons/Logo4.svg" alt="">
+                        <img src="./illustrations & Icons/Logo5.svg" alt="">
+                        <img src="./illustrations & Icons/Logo6.svg" alt="">
+
+                        <a href="" target="_blank" class="text-brand font-semibold text-lg">Meet all customers <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-brand">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                          </svg>
+                          </a>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+
+        <section class="px-10 my-10 text-center mt-10 mb-40">
+            <h2 class="text-2xl text-grey2 font-semibold pb-2">Caring is the new marketing</h2>
+            <p class="text-xs font-normal text-grey1 pb-1">The Nexcent blog is the best place to read about the latest membership insights, <br> trends and more. See who's joining the community, read about how our community <br> are increasing their membership income and lot's more.​</p>
+
+
+            <div class="pt-5 flex space-x-20 justify-center pl-10">
+
+                <div class=" relative w-1/4 ">
+                    <img src="illustrations & Icons/image2.png" alt="" class="w-200 h-48 object-cover object-center rounded-md">
+                    <div class="absolute top-1/2 shadow-lg left-4 right-0 p-2 bg-blog rounded-md w-3/4 mt-10">
+                        <h3 class="text-sm font-semibold text-grey1 text-center pr-2">Creating streamlined safeguarding processes with OneRen</h3>
+
+                        <div class="flex items-center justify-center">
+                            <a href="#" class="text-brand font-md mt-4">Read more</a>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-brand mt-4 ml-2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                              </svg>
+                        </div>
+                       
+                    </div>
+                </div>
+
+                <div class=" relative w-1/4 ">
+                    <img src="./illustrations & Icons/image3.png" alt="" class="w-200 h-48 object-cover object-center rounded-md">
+                    <div class="absolute top-1/2 shadow-lg left-4 right-0 p-2 bg-blog rounded-md w-3/4 mt-10">
+                        <h3 class="text-sm font-semibold text-grey1 text-center pr-2">What are your safeguarding responsibilities and how can you manage them?</h3>
+
+                        <div class="flex items-center justify-center">
+                            <a href="#" class="text-brand font-md mt-4">Read more</a>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-brand mt-4 ml-2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                              </svg>
+                        </div>
+                       
+                    </div>
+                </div>
+
+                <div class=" relative w-1/4 ">
+                    <img src="./illustrations & Icons/image4.png" alt="" class="w-200 h-48 object-cover object-center rounded-md">
+                    <div class="absolute top-1/2 shadow-lg left-4 right-0 p-2 bg-blog rounded-md w-3/4 mt-10">
+                        <h3 class="text-sm font-semibold text-grey1 text-center pr-2">Revamping the Membership Model with Triathlon <br> Australia</h3>
+
+                        <div class="flex items-center justify-center">
+                            <a href="#" class="text-brand font-md mt-4">Read more</a>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-brand mt-4 ml-2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                              </svg>
+                        </div>
+                       
+                    </div>
+                </div>
+
+            </div>
+        
+
+    
+
+        </section>
+
+    </main>
+
+    <!-- footer -->
+
+    <footer>
+
+        <section class="flex flex-col items-center justify-center bg-footer py-10 px-10">
+            <h2 class="text-4xl font-bold text-brand2 text-center pb-6">Pellentesque suscipit<br>fringilla libero eu.</h2>
+
+            <button class="text-center rounded-sm bg-brand text-white text-xs font-normal py-2 px-4 flex hover:bg-herop">Get a Demo <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 fill-white pl-2 pb-1">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+              </svg></button>  
+        </section>
+
+
+        <section class="bg-brand2 py-10 px-10">
+
+            <div class="flex justify-center space-x-20 pt-10">
+
+                <div class="pr-40">
+                    <img src="./illustrations & Icons/footerLogo.svg" alt="" class="pb-6 pt-2">
+                    <p class="text-footer font-normal text-lg pb-7">Copyright © 2020 Nexcent ltd. <br>All rights reserved </p>
+
+                    <div class="flex items-center space-x-4 pt-4 pb-4">
+                        <a href="#"><img src="./illustrations & Icons/icons8-instagram (1).svg" alt="" class="bg-socialsbg rounded-full p-1 w-8 h-8"></a>
+
+                        <a href="#"><img src="./illustrations & Icons/icons8-dribbble.svg" alt="" class="bg-socialsbg rounded-full p-1 w-8 h-8"></a>
+
+                        <a href="#"><img src="./illustrations & Icons/icons8-twitter-bird.svg" alt="" class="bg-socialsbg rounded-full p-1 w-8 h-8"></a>
+
+                        <a href="#"><img src="./illustrations & Icons/icons8-youtube.svg" alt="" class="bg-socialsbg rounded-full p-1 w-8 h-8"></a>
+
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold text-lg text-white">Company</h4>
+
+                        <ul class="flex flex-col space-y-4 pt-4 text-white text-xs font-light">
+
+                            <a href="#">About us</a>
+                            <a href="#">Blog</a>
+                            <a href="#">Contact us</a>
+                            <a href="#">Pricing</a>
+                            <a href="#">Testimonials</a>
+                           
+                        </ul>
+                
+
+                </div>
+
+                <div>
+                    <h4 class="font-semibold text-lg text-white">Support</h4>
+
+                    <ul class="flex flex-col space-y-4 pt-4 text-white text-xs font-light">
+                        <a href="#">Help center</a>
+                <a href="#">Terms of service</a>
+                <a href="#">Legal</a>
+                <a href="#">Privacy policy</a>
+                <a href="#">Status</a>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold text-lg text-white">Stay up to date</h4>
+
+                    
+                       <div class="relative">
+                        <input type="text" placeholder="Your email address" class="bg-footerfield text-xs text-white flex font-normal p-2 rounded-md w-48 mt-4">
+                        <button class="w-4 absolute right-1 top-2"><img src="./illustrations & Icons/icons8-send-50 (1).png" alt=""></button>
+                       </div>
+
+                    
+                </div>
+
+            </div>
+
+        </section>
+
+    </footer>
+    
+</body>
+</html>
