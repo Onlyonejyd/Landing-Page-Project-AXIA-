@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+    
+
     <script>
       tailwind.config = {
         theme: {
@@ -33,50 +37,83 @@
         }
       
     </script>
+
+<style>
+    .hidden {
+      display: none;
+    }
+    .nav-links {
+      transition: top 0.3s ease-in-out;
+      
+    }
+    .nav-open {
+        top: 0 !important;
+      }
+
+  </style>
+    
 </head>
-<body>
+<body class="">
 
     <header class="bg-Hero">
 
-        <!-- navigation Bar -->
-
-        <div class="flex flex-col md:flex-row p-4 justify-around pt-10">
-            <img src="./illustrations & Icons/Logo@2x.svg" alt="" class="w-40 md:w-80 lg:full"> 
-
-            <nav>
-                <ul class="flex items-center space-x-6">
-                    <li><a href="" class="text-nav font-normal text-md">Home</a></li>
-                    <li><a href="" class="text-nav font-normal text-md">Servive</a></li>
-                    <li><a href="" class="text-nav font-normal text-md">Feature</a></li>
-                    <li><a href="" class="text-nav font-normal text-md">Product</a></li>
-                    <li><a href="" class="text-nav font-normal text-md">Testimonial</a></li>
-                    <li><a href="" class="text-nav font-normal text-md">FAQ</a></li>
-                </ul>
-            </nav>
-
-            <div class="space-x-4">
-                <button class="text-brand text-xs font-semibold">Login</button>
-                <button class="rounded-sm text-white bg-brand px-5 py-2 text-xs hover:bg-herop font-semibold">Signup</button>
-            </div>
-            
+         <!-- Toggle Button for Mobile Navigation -->
+         <div class="flex justify-between items-center p-4 md:hidden">
+            <img src="./illustrations & Icons/Logo@2x.svg" alt="" class="w-40">
+            <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
         </div>
+
+        <nav class="mx-auto flex justify-around items-center w-[92%] pt-5">
+
+            <img src="./illustrations & Icons/Logo@2x.svg" alt="" class="w-40 hidden md:inline">
+
+               <div id="nav-links" class="nav-links absolute bg-brand2 md:bg-Hero min-h-screen md:min-h-fit left-0 top-[-100%] md:flex w-full items-center px-5 md:static md:w-auto md:flex-row md:items-center md:gap-[4vw]">
+
+                <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8"> 
+                    <li><a href="" class="text-nav font-normal hover:text-brand text-md text-white md:text-black">Home</a></li>
+                    <li><a href="" class="text-nav font-normal hover:text-brand text-md text-white md:text-black">Service</a></li>
+                    <li><a href="" class="text-nav font-normal hover:text-brand text-md text-white md:text-black">Feature</a></li>
+                    <li><a href="" class="text-nav font-normal hover:text-brand text-md text-white md:text-black">Product</a></li>
+                    <li><a href="" class="text-nav font-normal hover:text-brand text-md text-white md:text-black">Testimonial</a></li>
+                    <li><a href="" class="text-nav font-normal hover:text-brand text-md text-white md:text-black">FAQ</a></li>
+    
+                 </ul>
+
+                 <div class="space-x-4 flex md:flex-row justify-center items-center  md:hidden">
+                    <button class="text-brand text-xs font-semibold hover:text-white">Login</button>
+                    <button class="rounded-sm text-white bg-brand px-5 py-2 text-xs hover:bg-herop font-semibold">Signup</button> 
+                   </div>
+
+               </div>
+
+               <div class="space-x-4 flex justify-center items-center hidden md:flex">
+                <button class="text-brand text-xs font-semibold hover:text-black">Login</button>
+                <button class="rounded-sm text-white bg-brand px-5 py-2 text-xs hover:bg-herop font-semibold">Signup</button> 
+               </div>
+
+
+               
+
+        </nav>
+
+        
 
         <!-- Herosection-------- -->
 
+        <section id="hero-section" class="flex flex-col items-center md:flex-row md:items-center md:justify-around p-10 space-y-8 md:space-y-0 md:space-x-8">
 
-        <div class="flex items-center justify-around p-10 space-x-8">
-            <div class="pl-20 w-2/4">
-
-                <h1 class="-10 text-5xl font-bold text-left text-grey2">Lessons and insights <br> <span class="text-5xl font-bold text-left text-brand pt-2">from 8 years</span></h1> 
+            <div class="w-full md:w-2/4 text-left md:pl-20 md:py-20">
+                <h1 class="text-5xl font-bold text-grey2">Lessons and insights <br> <span class="text-5xl font-bold text-brand pt-2">from 8 years</span></h1> 
                 <p class="text-sm py-5 font-normal text-herop">Where to grow your business as a photographer: site or social media?</p>
-    
-    
-                <button class="rounded-sm bg-brand text-white text-xs py-2 px-6 hover:bg-herop">Register</button></div>
+                <button class="rounded-sm bg-brand text-white text-xs py-2 px-6 hover:bg-herop">Register</button>
+            </div>
 
+            <div class="w-full md:w-2/4 flex justify-center">
+                <img src="./illustrations & Icons/Illustration-hero.svg" alt="" class="w-3/4 md:w-2/4">
+            </div>
 
-            <div class="pl-40 pr-20 w-2/4"> <img src="./illustrations & Icons/Illustration-hero.svg" alt="" class="w-200"></div>
-            
-        </div>
+        </section>
+        
 
 
     </header>
@@ -85,13 +122,13 @@
 
     <main>
 
-        <section class="bg-white px-10 mb-20">
+        <section class="bg-white px-10">
 
             <h1 class="text-grey2 text-center text-2xl font-semibold leading-6 pt-10 pb-3">Manage your entire community <br> in a single system</h1>
             <p class="text-grey1 text-center text-xs leading-tight text-normal ">Who is Nextcent suitable for?
             </p>
 
-            <div class="grid grid-cols-3 gap-4 justify-around p-10">
+            <div class="grid grid-rows-3 md:flex justify-around md:mb-10 gap-4 justify-around p-10">
 
                 <div class="flex flex-col items-center">
                     <img src="./illustrations & Icons/Icon2.svg" alt="" class="pb-3">
@@ -119,17 +156,17 @@
 
         <section class="mb-10">
 
-            <div class="flex items-center justify-around p-10 ">
+            <div id="unseen" class="flex flex-col items-center justify-center p-10 text-center md:flex-row md:justify-around md:text-left">
 
-                <div>
-                    <img src="./illustrations & Icons/illustration2.svg" alt="" class="w-full pl-20">
+                <div class="w-full md:pl-20 md:w-2/4 pb-5 md:pb-">
+                    <img src="./illustrations & Icons/illustration2.svg" alt="" class="w-full md:w-3/4 md:pl-20">
                 </div>
 
 
-                <div class="w-2/4 pl-20 ">
-                    <h2 class="text-grey2 text-left font-semibold text-3xl leading-8 pb-5">The unseen of spending three <br> years at Pixelgrade</h2>
+                <div class="w-full md:w-2/4 md:pl-20">
+                    <h2 class="text-grey2 text-3xl font-semibold leading-8 pb-5 w-full md:w-3/4 text-center md:text-left">The unseen of spending three years at Pixelgrade</h2>
 
-                    <p class="text-grey1 text-xs text-left font-normal pb-7">When joining the JustGo Community, your success becomes <br> our success. In other words, our Customer Success team will <br> be on hand from day one to ensure we understand your requirements, <br> share your goals and work with you for a smooth adoption of our software.</p>
+                    <p class="text-grey1 text-xs font-normal pb-7 w-full md:w-3/4 text-center md:text-left">When joining the JustGo Community, your success becomes our success.In other words, our Customer Success team will be on hand from day one to ensure we understand your requirements, share your goals and work with you for a smooth adoption of our software.</p>
 
                     <button class="rounded-sm bg-brand text-white text-xs py-2 px-6 hover:bg-herop">Learn More</button>
 
@@ -139,39 +176,39 @@
         </section>
 
 
-        <section class="bg-Hero py-20 px-10 my-10">
-            <div class="flex justify-around">
+        <section id="stats" class="bg-Hero py-5 md:py-20 px-10 my-10">
+            <div class="flex flex-col items-center md:flex-row md:items-start md:justify-around">
 
-                <div class="pl-40 w-2/4 pt-5">
-                    <h2 class="text-grey2 text-3xl font-semibold leading-7 pb-2">Helping a local <br> <span class="text-brand text-3xl font-semibold">business reinvent itself</span></h2>
+                <div class="pl-0 pb-10 md:pl-40 w-full md:w-2/4 pt-5 text-center md:text-left">
+                    <h2 class="text-grey2 text-3xl font-semibold leading-9 pb-3 md:pb-">Helping a local <br> <span class="text-brand text-3xl font-semibold">business reinvent itself</span></h2>
                     <p class="text-xs text-grey1 font-medium">We reached here with our hard work and dedication</p>
                 </div>
 
 
-                <div class="grid grid-flow-row-dense grid-cols-2 grid-rows-2 gap-y-4 w-2/4 pl-10 ">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full md:w-2/4">
 
-                    <div class="flex space-x-3">
+                    <div class="flex flex-col items-center md:flex-row space-x-3">
                         <img src="./illustrations & Icons/icon5.svg" alt="">
                        
                         <div> <h2 class="text-lg text-grey2 font-semibold">2,245,341</h2> 
                             <p class="text-xs font-normal text-grey1">Members</p></div>
                     </div>
 
-                    <div class="flex space-x-3">
+                    <div id="club" class="flex flex-col items-center md:flex-row space-x-3">
                         <img src="./illustrations & Icons/Icon6.svg" alt="">
                         
                         <div><h2 class="text-lg text-grey2 font-semibold">46,328</h2>
                             <p class="text-xs font-normal text-grey1">Clubs</p></div>
                     </div>
 
-                    <div class="flex space-x-3">
+                    <div class="flex flex-col items-center md:flex-row space-x-3">
                         <img src="./illustrations & Icons/Icon7.svg" alt="">
                         
                         <div><h2 class="text-lg text-grey2 font-semibold">828,867</h2>
                             <p class="text-xs font-normal text-grey1">Event Bookings</p></div>
                     </div>
 
-                    <div class="flex space-x-3">
+                    <div id="payments" class="flex flex-col items-center md:flex-row space-x-3">
                         <img src="./illustrations & Icons/Icon8.svg" alt="">
 
                         <div> <h2 class="text-lg text-grey2 font-semibold">1,926,436</h2>
@@ -187,18 +224,18 @@
 
         <section>
 
-            <div class="flex items-center justify-around p-10">
+            <div id="design" class="flex flex-col items-center text-center md:flex-row md:items-start md:text-left justify-around p-10">
 
-                <div class="w-2/4 pl-40 ">
-                    <img src="./illustrations & Icons/illustration3.svg" alt="" class="w-3/4">
+                <div class="w-full pl:0 pb-4 md:w-2/4 md:pl-40 m:pb-0">
+                    <img src="./illustrations & Icons/illustration3.svg" alt="" class="w-3/4 pl-20 md:pl-0 md:w-3/4">
                 </div>
 
 
-                <div class="w-2/4 pl-10 ">
+                <div class="w-full pt-0 md:pt-10 md:w-2/4 pl:0 md:pl-10 ">
 
                     <h2 class="text-grey2 text-2xl font-semibold pb-2">How to design your site footer <br> like we did</h2>
 
-                    <p class="text-xs text-grey1 font-normal pb-4 ">Donec a eros justo. Fusce egestas tristique ultrices. Nam tempor, augue nec tincidunt <br> molestie, massa nunc varius arcu, at scelerisque elit erat a magna. Donec quis erat at <br> libero ultrices mollis. In hac habitasse platea dictumst. Vivamus vehicula leo dui, at <br> porta nisi facilisis finibus. In euismod augue vitae nisi ultricies, non aliquet urna <br>tincidunt. Integer in nisi eget nulla commodo faucibus efficitur quis massa. Praesent <br> felis est, finibus et nisi ac, hendrerit venenatis libero. Donec consectetur <br> faucibus ipsum id gravida.</p>
+                    <p class="text-xs text-grey1 font-normal pb-4 w-full md:w-3/4">Donec a eros justo. Fusce egestas tristique ultrices. Nam tempor, augue nec tincidunt molestie, massa nunc varius arcu, at scelerisque elit erat a magna. Donec quis erat at libero ultrices mollis. In hac habitasse platea dictumst. Vivamus vehicula leo dui, at porta nisi facilisis finibus. In euismod augue vitae nisi ultricies, non aliquet urna tincidunt. Integer in nisi eget nulla commodo faucibus efficitur quis massa. Praesent felis est, finibus et nisi ac, hendrerit venenatis libero. Donec consectetur faucibus ipsum id gravida.</p>
 
                     <button class="rounded-sm bg-brand text-white text-xs py-2 px-6 hover:bg-herop">Learn More</button>
                 </div>
@@ -209,22 +246,25 @@
 
         <section class="bg-Hero py-20 px-10 my-10">
 
-            <div class="flex justify-center ">
+            <div class="flex flex-col md:flex-row justify-center ">
 
-                <div class="w-1/2 pl-40">
-                    <img src="./illustrations & Icons/image1.svg" alt="" class="w-3/4 h-80">
+                <div class="w-full px-20 md:w-1/2 md:pl-40">
+                    <img src="./illustrations & Icons/image1.svg" alt="" class="w-full md:w-3/4 md:h-80">
                 </div>
 
 
-                <div class="w-3/4 pr-20">
-                    <p class="text-herop text-xs font-normal pb-2 pt-8">“We have enjoyed working with the JustGo system to setup and go live with our new membership platform. The initial effort to organise it along the lines of how our sport currently works  was quick and relatively easy. The new system has already massively improved the time and effort it takes to setup and process member and club applications.It will help us to communicate with people in our sport in a much more effective way, and collect  data to help us improve how our sport is governed.”</p>
+                <div class="w-full px-auto md:w-3/4 md:pr-20">
+                    <p class="text-herop text-xs font-normal text-center md:text-left pb-2 pt-8">“We have enjoyed working with the JustGo system to setup and go live with our new membership platform. The initial effort to organise it along the lines of how our sport currently works  was quick and relatively easy. The new system has already massively improved the time and effort it takes to setup and process member and club applications.It will help us to communicate with people in our sport in a much more effective way, and collect  data to help us improve how our sport is governed.”</p>
 
-                    <h2 class="text-brand text-xl font-semibold pb-2">Tim Smith</h2>
+                    <h2 class="text-brand text-xl font-semibold pb-2 text-center md:text-left">Tim Smith</h2>
 
-                    <h4 class="pb-2 text-timsmith text-sm pb-2">British Dragon Boat Racing Association</h4>
+                    <h4 class="pb-2 text-timsmith text-sm pb-2 text-center md:text-left">British Dragon Boat Racing Association</h4>
 
 
-                    <div class="flex items-center space-x-6 pt-4">
+                    <div class="flex flex-col items-center md:flex-row md:items-center md:space-x-6 pt-4">
+
+                        <div class="flex items-center space-x-3">
+
                         <img src="./illustrations & Icons/Logo1.svg" alt="">
                         <img src="./illustrations & Icons/Logo2.svg" alt="">
                         <img src="./illustrations & Icons/Logo3.svg" alt="">
@@ -232,10 +272,15 @@
                         <img src="./illustrations & Icons/Logo5.svg" alt="">
                         <img src="./illustrations & Icons/Logo6.svg" alt="">
 
-                        <a href="" target="_blank" class="text-brand font-semibold text-lg">Meet all customers <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-brand">
+                        </div>
+                        
+
+                       <div class="pt-2 md:pt-0">
+                        <a href="" target="_blank" class="flex text-brand font-semibold text-lg hover:text-black">Meet all customers <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-brand pl-2 pt-2 hover:text-black">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
                           </svg>
                           </a>
+                       </div>
                     </div>
                 </div>
 
@@ -244,21 +289,21 @@
         </section>
 
 
-        <section class="px-10 my-10 text-center mt-10 mb-40">
+        <section id="blog" class="px-10 my-10 text-center mt-10 mb-40">
             <h2 class="text-2xl text-grey2 font-semibold pb-2">Caring is the new marketing</h2>
-            <p class="text-xs font-normal text-grey1 pb-1">The Nexcent blog is the best place to read about the latest membership insights, <br> trends and more. See who's joining the community, read about how our community <br> are increasing their membership income and lot's more.​</p>
+            <p class="text-xs font-normal text-grey1 w-full md:px-40 pb-1">The Nexcent blog is the best place to read about the latest membership insights, trends and more. See who's joining the community, read about how our community are increasing their membership income and lot's more.​</p>
 
 
-            <div class="pt-5 flex space-x-20 justify-center pl-10">
+            <div class="pt-5 flex flex-col md:flex-row space-y-20 md:space-y-0 md:space-x-20 justify-center md:pl-10">
 
-                <div class=" relative w-1/4 ">
+                <div class=" relative w-full md:w-1/4 flex flex-col items-center md:flex-row">
                     <img src="illustrations & Icons/image2.png" alt="" class="w-200 h-48 object-cover object-center rounded-md">
-                    <div class="absolute top-1/2 shadow-lg left-4 right-0 p-2 bg-blog rounded-md w-3/4 mt-10">
+                    <div class="absolute top-1/2 shadow-lg md:left-4 md:right-0 p-2 bg-blog rounded-md w-2/4 md:w-3/4 mt-10">
                         <h3 class="text-sm font-semibold text-grey1 text-center pr-2">Creating streamlined safeguarding processes with OneRen</h3>
 
                         <div class="flex items-center justify-center">
-                            <a href="#" class="text-brand font-md mt-4">Read more</a>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-brand mt-4 ml-2">
+                            <a href="#" class="text-brand font-md mt-4 hover:text-black">Read more</a>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-brand mt-4 ml-2 hover:text-black cursor-pointer">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
                               </svg>
                         </div>
@@ -266,14 +311,14 @@
                     </div>
                 </div>
 
-                <div class=" relative w-1/4 ">
+                <div class=" relative w-full md:w-1/4 flex flex-col items-center md:flex-row">
                     <img src="./illustrations & Icons/image3.png" alt="" class="w-200 h-48 object-cover object-center rounded-md">
-                    <div class="absolute top-1/2 shadow-lg left-4 right-0 p-2 bg-blog rounded-md w-3/4 mt-10">
+                    <div class="absolute top-1/2 shadow-lg md:left-4 md:right-0 p-2 bg-blog rounded-md  w-2/4 md:w-3/4 mt-10">
                         <h3 class="text-sm font-semibold text-grey1 text-center pr-2">What are your safeguarding responsibilities and how can you manage them?</h3>
 
                         <div class="flex items-center justify-center">
-                            <a href="#" class="text-brand font-md mt-4">Read more</a>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-brand mt-4 ml-2">
+                            <a href="#" class="text-brand font-md mt-4 hover:text-black">Read more</a>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-brand mt-4 ml-2 hover:text-black cursor-pointer">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
                               </svg>
                         </div>
@@ -281,14 +326,14 @@
                     </div>
                 </div>
 
-                <div class=" relative w-1/4 ">
+                <div class=" relative w-full md:w-1/4 flex flex-col items-center md:flex-row">
                     <img src="./illustrations & Icons/image4.png" alt="" class="w-200 h-48 object-cover object-center rounded-md">
-                    <div class="absolute top-1/2 shadow-lg left-4 right-0 p-2 bg-blog rounded-md w-3/4 mt-10">
+                    <div class="absolute top-1/2 shadow-lg md:left-4 md:right-0 p-2 bg-blog rounded-md w-2/4 md:w-3/4 mt-10">
                         <h3 class="text-sm font-semibold text-grey1 text-center pr-2">Revamping the Membership Model with Triathlon <br> Australia</h3>
 
                         <div class="flex items-center justify-center">
-                            <a href="#" class="text-brand font-md mt-4">Read more</a>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-brand mt-4 ml-2">
+                            <a href="#" class="text-brand font-md mt-4 hover:text-black">Read more</a>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-brand mt-4 ml-2 hover:text-black cursor-pointer">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
                               </svg>
                         </div>
@@ -320,9 +365,9 @@
 
         <section class="bg-brand2 py-10 px-10">
 
-            <div class="flex justify-center space-x-20 pt-10">
+            <div class="flex flex-col md:flex-row justify-center space-x-20 pt-10">
 
-                <div class="pr-40">
+                <div class="mx-20 md:pr-40 md:mx-20">
                     <img src="./illustrations & Icons/footerLogo.svg" alt="" class="pb-6 pt-2">
                     <p class="text-footer font-normal text-lg pb-7">Copyright © 2020 Nexcent ltd. <br>All rights reserved </p>
 
@@ -338,8 +383,11 @@
                     </div>
                 </div>
 
-                <div>
-                    <h4 class="font-semibold text-lg text-white">Company</h4>
+                <div class="flex pb-10 md:justify-around md:space-x-20">
+
+                    <div class="pr-20 md:pr-0">
+
+                        <h4 class="font-semibold text-lg text-white">Company</h4>
 
                         <ul class="flex flex-col space-y-4 pt-4 text-white text-xs font-light">
 
@@ -350,21 +398,26 @@
                             <a href="#">Testimonials</a>
                            
                         </ul>
+                    </div>
+                   
+
+
+                        <div>
+                            <h4 class="font-semibold text-lg text-white">Support</h4>
+        
+                            <ul class="flex flex-col space-y-4 pt-4 text-white text-xs font-light">
+                                <a href="#">Help center</a>
+                        <a href="#">Terms of service</a>
+                        <a href="#">Legal</a>
+                        <a href="#">Privacy policy</a>
+                        <a href="#">Status</a>
+                            </ul>
+                        </div>
                 
 
                 </div>
 
-                <div>
-                    <h4 class="font-semibold text-lg text-white">Support</h4>
-
-                    <ul class="flex flex-col space-y-4 pt-4 text-white text-xs font-light">
-                        <a href="#">Help center</a>
-                <a href="#">Terms of service</a>
-                <a href="#">Legal</a>
-                <a href="#">Privacy policy</a>
-                <a href="#">Status</a>
-                    </ul>
-                </div>
+              
 
                 <div>
                     <h4 class="font-semibold text-lg text-white">Stay up to date</h4>
@@ -372,7 +425,7 @@
                     
                        <div class="relative">
                         <input type="text" placeholder="Your email address" class="bg-footerfield text-xs text-white flex font-normal p-2 rounded-md w-48 mt-4">
-                        <button class="w-4 absolute right-1 top-2"><img src="./illustrations & Icons/icons8-send-50 (1).png" alt=""></button>
+                        <button class="w-4 absolute left-40 top-2 md:right-1 md:top-2"><img src="./illustrations & Icons/icons8-send-50 (1).png" alt=""></button>
                        </div>
 
                     
@@ -383,6 +436,31 @@
         </section>
 
     </footer>
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelector('.nav-links')
+
+
+            function onToggleMenu(el) {
+            el.name = el.name === 'menu' ? 'close' : 'menu';
+            navLinks.classList.toggle('top-[9%]')
+        }
+        window.onToggleMenu = onToggleMenu
+        })
+
+        
+        function onToggleMenu(el) {
+            el.name = el.name === 'menu' ? 'close' : 'menu';
+            var navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('hidden');
+            navLinks.classList.toggle('nav-open');
+        }
     
+        
+
+       
+    </script>
 </body>
 </html>
