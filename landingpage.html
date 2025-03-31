@@ -5,10 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-
     
-
     <script>
       tailwind.config = {
         theme: {
@@ -44,6 +41,10 @@
     }
     .nav-links {
       transition: top 0.3s ease-in-out;
+      top: -100%;
+      position: absolute;
+      width: 100%;
+      background-color: #263238;
       
     }
     .nav-open {
@@ -53,14 +54,15 @@
   </style>
     
 </head>
-<body class="">
+<body>
 
     <header class="bg-Hero">
 
          <!-- Toggle Button for Mobile Navigation -->
          <div class="flex justify-between items-center p-4 md:hidden">
             <img src="./illustrations & Icons/Logo@2x.svg" alt="" class="w-40">
-            <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
+            
+            <button onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"><img src="./illustrations & Icons/icons8-menu-48.png" alt=""></button>
         </div>
 
         <nav class="mx-auto flex justify-around items-center w-[92%] pt-5">
@@ -118,7 +120,7 @@
 
     </header>
 
-    <!-- main -->
+    <!-- main content -->
 
     <main>
 
@@ -263,7 +265,7 @@
 
                     <div class="flex flex-col items-center md:flex-row md:items-center md:space-x-6 pt-4">
 
-                        <div class="flex items-center space-x-3">
+                        <div class="flex flex-wrap items-center space-x-3">
 
                         <img src="./illustrations & Icons/Logo1.svg" alt="">
                         <img src="./illustrations & Icons/Logo2.svg" alt="">
@@ -294,9 +296,9 @@
             <p class="text-xs font-normal text-grey1 w-full md:px-40 pb-1">The Nexcent blog is the best place to read about the latest membership insights, trends and more. See who's joining the community, read about how our community are increasing their membership income and lot's more.​</p>
 
 
-            <div class="pt-5 flex flex-col md:flex-row space-y-20 md:space-y-0 md:space-x-20 justify-center md:pl-10">
+            <div class="pt-5 flex flex-col md:flex-row space-y-40 md:space-y-0 md:space-x-20 justify-center md:pl-10">
 
-                <div class=" relative w-full md:w-1/4 flex flex-col items-center md:flex-row">
+                <div class="relative w-full md:w-1/4 flex flex-col items-center md:flex-row">
                     <img src="illustrations & Icons/image2.png" alt="" class="w-200 h-48 object-cover object-center rounded-md">
                     <div class="absolute top-1/2 shadow-lg md:left-4 md:right-0 p-2 bg-blog rounded-md w-2/4 md:w-3/4 mt-10">
                         <h3 class="text-sm font-semibold text-grey1 text-center pr-2">Creating streamlined safeguarding processes with OneRen</h3>
@@ -311,7 +313,7 @@
                     </div>
                 </div>
 
-                <div class=" relative w-full md:w-1/4 flex flex-col items-center md:flex-row">
+                <div class="relative w-full md:w-1/4 flex flex-col items-center md:flex-row">
                     <img src="./illustrations & Icons/image3.png" alt="" class="w-200 h-48 object-cover object-center rounded-md">
                     <div class="absolute top-1/2 shadow-lg md:left-4 md:right-0 p-2 bg-blog rounded-md  w-2/4 md:w-3/4 mt-10">
                         <h3 class="text-sm font-semibold text-grey1 text-center pr-2">What are your safeguarding responsibilities and how can you manage them?</h3>
@@ -326,7 +328,7 @@
                     </div>
                 </div>
 
-                <div class=" relative w-full md:w-1/4 flex flex-col items-center md:flex-row">
+                <div class="relative w-full md:w-1/4 flex flex-col items-center md:flex-row">
                     <img src="./illustrations & Icons/image4.png" alt="" class="w-200 h-48 object-cover object-center rounded-md">
                     <div class="absolute top-1/2 shadow-lg md:left-4 md:right-0 p-2 bg-blog rounded-md w-2/4 md:w-3/4 mt-10">
                         <h3 class="text-sm font-semibold text-grey1 text-center pr-2">Revamping the Membership Model with Triathlon <br> Australia</h3>
@@ -365,11 +367,11 @@
 
         <section class="bg-brand2 py-10 px-10">
 
-            <div class="flex flex-col md:flex-row justify-center space-x-20 pt-10">
+            <div class="flex flex-col md:flex-row justify-center md:space-x-20 pt-10">
 
                 <div class="mx-20 md:pr-40 md:mx-20">
                     <img src="./illustrations & Icons/footerLogo.svg" alt="" class="pb-6 pt-2">
-                    <p class="text-footer font-normal text-lg pb-7">Copyright © 2020 Nexcent ltd. <br>All rights reserved </p>
+                    <p class="text-footer font-normal text-lg text-center md:text-left pb-7">Copyright © 2020 Nexcent ltd. <br>All rights reserved </p>
 
                     <div class="flex items-center space-x-4 pt-4 pb-4">
                         <a href="#"><img src="./illustrations & Icons/icons8-instagram (1).svg" alt="" class="bg-socialsbg rounded-full p-1 w-8 h-8"></a>
@@ -383,7 +385,7 @@
                     </div>
                 </div>
 
-                <div class="flex pb-10 md:justify-around md:space-x-20">
+                <div class="flex pb-10 mx-auto md:mx-0 md:justify-around md:space-x-20">
 
                     <div class="pr-20 md:pr-0">
 
@@ -419,8 +421,8 @@
 
               
 
-                <div>
-                    <h4 class="font-semibold text-lg text-white">Stay up to date</h4>
+                <div class="mx-auto md:mx-0">
+                    <h4 class="font-semibold text-lg text-white ml-7 md:ml-0">Stay up to date</h4>
 
                     
                        <div class="relative">
@@ -439,28 +441,25 @@
 
     <script>
 
-        document.addEventListener('DOMContentLoaded', function() {
-            const navLinks = document.querySelector('.nav-links')
-
-
-            function onToggleMenu(el) {
-            el.name = el.name === 'menu' ? 'close' : 'menu';
-            navLinks.classList.toggle('top-[9%]')
-        }
-        window.onToggleMenu = onToggleMenu
-        })
-
-        
-        function onToggleMenu(el) {
-            el.name = el.name === 'menu' ? 'close' : 'menu';
-            var navLinks = document.getElementById('nav-links');
-            navLinks.classList.toggle('hidden');
-            navLinks.classList.toggle('nav-open');
-        }
+document.addEventListener('DOMContentLoaded', function() {
+             const navLinks = document.querySelector('.nav-links')
+ 
+ 
+             function onToggleMenu(el) {
+             el.name = el.name === 'menu' ? 'close' : 'menu';
+             navLinks.classList.toggle('top-[9%]')
+         }
+         window.onToggleMenu = onToggleMenu
+         })
+ 
+ 
+         function onToggleMenu(el) {
+             el.name = el.name === 'menu' ? 'close' : 'menu';
+             var navLinks = document.getElementById('nav-links');
+             navLinks.classList.toggle('hidden');
+             navLinks.classList.toggle('nav-open');
+         }
     
-        
-
-       
     </script>
 </body>
 </html>
